@@ -1,0 +1,103 @@
+<section>
+  <h1>Simple material design CSS only chips example</h1>
+ 
+    <div class="md-chip">
+      <div>ssssssssss</div>
+      <div class="md-chip-remove">
+      <button type="button">
+      </button>
+      </div>
+    </div> 
+  </div>
+</section>
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+$md-chip-height: 32px;
+$md-chip-color: #e0e0e0;
+
+.md-chip {
+  display: flex;
+  background-color: transparent;
+  border-radius: 3.2px;
+  border: solid 0.8px #ff6400;
+  font-size: 14px;
+  width: fit-content;
+  max-width: 450px;
+  &.md-chip-hover:hover {
+    background: #ccc;
+  }
+}
+
+.md-chip {
+  height: $md-chip-height;
+  line-height: $md-chip-height;
+}
+
+
+.md-chip-remove {
+  display: flex;
+  background-color: #ff6400;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+
+  &:after { 
+    color: #fff;
+    content: 'x';
+  }
+  &:hover {
+    background: transparent;
+  }
+  &:active {
+    border: 0;
+    background: transparent;
+  }
+    &:focus {
+      outline:0;
+    }
+  }
+}
+
+
+
+
+
+
+// *************************************
+
+// *************************************
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background:#f0f0f0;
+  position: absolute;
+  width:100%;
+  padding:0;
+  margin:0;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+section {
+  background:white;
+  margin:0 auto;
+  padding: 4em;
+  max-width: 800px;
+  h1 {
+    margin: 0 0 2em;
+  }
+}
